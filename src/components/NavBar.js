@@ -1,18 +1,29 @@
+import "./NavBar.css";
 const NavBar = () => {
   return (
-    <nav class="topnav">
-      <ul>
+    <header className="header">
+      <a href="" className="logo">
+        Ecommerce Ivan Vilches
+      </a>
+      <input className="menu-btn" type="checkbox" id="menu-btn" />
+      <label className="menu-icon" for="menu-btn">
+        <span className="navicon"></span>
+      </label>
+      <ul className="menu">
         <li>
-          <a href="#">Inicio</a>
+          <a href="#inicio">Inicio</a>
         </li>
         <li>
-          <a href="#">Sobre nosotros</a>
+          <a href="#nosotros">Nosotros</a>
         </li>
         <li>
-          <a href="#">Contacto</a>
+          <a href="#tienda">Tienda</a>
+        </li>
+        <li>
+          <a href="#contacto">Contacto</a>
         </li>
       </ul>
-    </nav>
+    </header>
   );
 };
 

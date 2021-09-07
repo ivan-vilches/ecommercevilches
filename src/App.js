@@ -1,12 +1,8 @@
 import NavBar from "./components/NavBar";
+import "./App.css";
 
 const App = () => {
-  return (
-    <header className="test">
-      <h1> Hello World</h1>
-      <NavBar />
-    </header>
-  );
+  return <NavBar />;
 };
 
 export default App;

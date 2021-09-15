@@ -1,29 +1,22 @@
-import "./NavBar.css";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import CartWidget from "./CartWidget";
+
 const NavBar = () => {
   return (
-    <header className="header">
-      <a href="" className="logo">
-        Ecommerce Ivan Vilches
-      </a>
-      <input className="menu-btn" type="checkbox" id="menu-btn" />
-      <label className="menu-icon" for="menu-btn">
-        <span className="navicon"></span>
-      </label>
-      <ul className="menu">
-        <li>
-          <a href="#inicio">Inicio</a>
-        </li>
-        <li>
-          <a href="#nosotros">Nosotros</a>
-        </li>
-        <li>
-          <a href="#tienda">Tienda</a>
-        </li>
-        <li>
-          <a href="#contacto">Contacto</a>
-        </li>
-      </ul>
-    </header>
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home">Ecommerce Vilches</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#inicio">Inicio</Nav.Link>
+            <Nav.Link href="#categorias">Categorias</Nav.Link>
+            <Nav.Link href="#contacto">Contacto</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+        <CartWidget />
+      </Container>
+    </Navbar>
   );
 };
 

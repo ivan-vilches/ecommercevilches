@@ -28,6 +28,11 @@ const ItemCount = ({ stock, onAdd, initial }) => {
             <Button onClick={() => setCount(count - 1)} disabled={count <= 0}>
               -
             </Button>
+            <br />
+            <br />
+            <Button onClick={() => console.log("items agregado")}>
+              Agregar items
+            </Button>
           </Card.Body>
         </Card>
       </Row>
